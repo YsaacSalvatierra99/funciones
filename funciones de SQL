@@ -1,0 +1,15 @@
+/*RTRIM Y LTRIM
+Las dos eliminan espacios de una consulta, se combina las dos para eliminan espacios sobrantes de una cadena por ambos lados
+*/
+Ejemplo:
+SELECT 
+    LTRIM('   hola mundo   ') AS LTrimEjemplo,
+    RTRIM('   hola mundo   ') AS RTrimEjemplo,
+    LTRIM(RTRIM('   hola mundo   ')) AS AmbosLimpios;
+
+/*REPLACE
+Esta funcion busca en una cadena, una subcadena. Luego cambia esta subcadena por una nueva subcadena.*/
+Ejemplo:
+UPDATE DatosTrainRaw
+SET [Customer Name] = REPLACE([Customer Name], '  ', ' ') -- Acá estas reemplazando 2 espacios en blanco por 1, asi no hay excesos de expacios
+
